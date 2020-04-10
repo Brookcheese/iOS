@@ -2,8 +2,9 @@
 Nombre: Profa. Mayné González
 Curso: ITP 2340 IOS Development
 Fecha: 10 de abril de 2020
-Programa: Lab1
-Descripción: Programa que busca el número mayor y el número menor de tres números dados con valores diferentes.
+Programa: Módulo 4
+
+Ejercicio 1 - Descripción: Programa que busca el número mayor y el número menor de tres números dados con valores diferentes.
  */
 
 var strDescripcion = "Programa que busca el numero mayor y menor"
