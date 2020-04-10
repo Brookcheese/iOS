@@ -4,13 +4,15 @@ Curso: ITP 2340 IOS Development
 Fecha: 10 de abril de 2020
 Programa: Módulo 4
 
-Ejercicio 1 - Descripción: Programa que busca el número mayor y el número menor de tres números dados con valores diferentes.
+ Ejercicio 1 - Descripción: Programa que busca el número mayor y el número menor de tres números dados con valores diferentes.  Se demuestra el uso y declaración de variables
+ 
  */
 
-var strDescripcion = "Programa que busca el numero mayor y menor"
+var strDescripcion = "Programa que busca el numero mayor y menor" // declaración de una variable tipo String
 
-print( strDescripcion)
+print(strDescripcion) // método o función print. Aquí imprime lo que guarda la variable
 
+// declaración de 3 variables con tipos de datos numéricos enteros (integers)
 var A = 10
 var B = 20
 var C = 30
@@ -18,7 +20,7 @@ var C = 30
 var min = 0
 var max = 0
 
-// establecer cual es la mayor de los 3 números utilizando operadores relacionales o de comparación y el operador booleano "And" &&
+// Utilizando una estructura de control decisional para establecer cual es la mayor de los 3 números utilizando operadores relacionales o de comparación y el operador booleano "And" &&
 
 if A > B && A > C {
         max = A
@@ -35,7 +37,6 @@ if A > B && A > C {
     }
 
 // una vez se establezca el mayor se comparan los dos números restante para conocer cual es menor
-
 if B > A{
         min = A
         print ("A es mmenor = " , min)
@@ -45,12 +46,13 @@ else {
     min = B
     print ("B es menor = " , min)
 }
-
 print("\n") // escape caracter o enter
 
-/* Crear un Array (lista) con los 3 números para evaluar que numero es mayor y cual menor*/
+/* Crear un Array (lista) con los 3 números para evaluar que numero es mayor y cual menor */
  
-var listaNum = [A, B, C ]. // declaración del arrays
-listaNum.max()  // usando la función max() y mix()
+var listaNum = [A, B, C ] // declaración del arrays
+listaNum.max()  // usando la función max() y mix() para encontrar el valor mayor y menor en la lista
 listaNum.min()
 print (max, min) // imprimir el max y min respectivamente
+print("\n") // escape caracter o enter
+
