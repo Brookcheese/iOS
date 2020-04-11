@@ -84,5 +84,6 @@ print("Información del empleado:\n")
 print("Nombre = " + person.name + " " + person.lastName)
 print("Edad = ", person.age)
 print("Paga = ", id123.payRate)
+print("Horas trabajadas = ", cheque.workhours)
 print ("Pago neto = $ ",cheque.netPay)
 
