@@ -1,0 +1,88 @@
+/*
+ Ejercicio 3 - El programa deberá calcular la nómina (payroll) de empleados utilizando los conceptos de clases (objetos) y funciones explicadas en el módulo. El programa deberá calcular la nómina descontando las deducciones de seguro social e impuestos (income tax) al cálculo del número de horas trabajadas multiplicadas por el costo (rate) por hora que devenga el empleado. El programa deberá presentar los mensajes correspondientes de las variables que se utilicen en los objetos (clases), funciones y cálculos, tales como Id del Empleado, Nombre del Empleado, Rate por Hora, Deducciones, Pago Neto, etc.
+ */
+
+// declaración de constantes
+
+let incomeTaxRate = 0.153
+let segSocialRate = 0.062
+
+// clase Person
+
+class Person {
+    
+    let name: String
+    let lastName: String
+    let age: Int
+
+    init(name: String, lastName: String, age: Int) {
+        self.name = name
+        self.lastName = lastName
+        self.age = age
+        
+    }
+}
+
+//clase Employee
+
+class Employee {
+    let person: Person
+    let id: Int
+    let payRate: Double
+
+    init (person: Person, id: Int, rate: Double) {
+        self.person = person
+        self.id = id
+        payRate = rate
+    }
+    
+}
+
+// clase PayCheck
+
+class PayCheck {
+    let employee: Employee
+    var workhours = 0.0
+    var grossPay = 0.0
+    var incomeTax = 0.0
+    var segsocDeduc = 0.0
+    var deductions = 0.0
+    var netPay = 0.0
+
+    init(employee: Employee, workhours: Double) {
+        self.employee = employee
+        self.workhours = workhours
+    }
+    
+    // función pay
+    
+    func pay() {
+    grossPay = workhours * employee.payRate
+    incomeTax = grossPay * incomeTaxRate
+    segsocDeduc = grossPay * segSocialRate
+    deductions = incomeTax + segsocDeduc
+    netPay = grossPay - deductions
+    }
+}
+
+//creando una instancia(objeto) de la clase Person
+var person = Person(name:"Pedro",lastName: "Gonzalez", age: 40)
+
+// creando una instancia de la clase Employee
+var Pedro = person
+var id123 = Employee(person: Pedro,id: 123,rate: 55.00)
+
+
+// creando una instancia de la clase PayCheck
+var cheque = PayCheck(employee: id123, workhours: 40.00)
+
+// llamando la función pay() para que calcule el pado neto del empleado
+cheque.pay()
+
+//imprimir información
+print("Información del empleado:\n")
+print("Nombre = " + person.name + " " + person.lastName)
+print("Edad = ", person.age)
+print("Paga = ", id123.payRate)
+print ("Pago neto = $ ",cheque.netPay)
+
